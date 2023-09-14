@@ -3,17 +3,28 @@ import { logo } from "../assets";
 
 const Hero = () => {
   return (
-    <header className="w-full flex justify-between items-center w-full">
-      <nav className="flex justify-between items-center flex-col">
+    <header className="w-full flex justify-between items-center flex-col">
+      <nav className="flex justify-between items-center w-full pt-3 mb-3">
         <img src={logo} alt="sumz_logo" className="w-28 object-contain" />
+
+        <button
+          type="button"
+          onClick={() =>
+            window.open("https://github.com/SirJames115/article-summerizer")
+          }
+          className="black_btn">
+          GitHub
+        </button>
       </nav>
 
-      <button
-        type="button"
-        onClick={() => window.open("https://githug.com")}
-        className="black_btn">
-        GitHub
-      </button>
+      <h1 className="head_text">
+        Summarize Articles with <br className="max-md:hidden" />
+        <span className="orange_gradient">OpenAI GPT-4</span>
+      </h1>
+      <h2 className="desc">
+        Simplify your reading with summize, an open-source article summerizer
+        that transforms lengthy articles into clear and concise summaries
+      </h2>
     </header>
   );
 };
